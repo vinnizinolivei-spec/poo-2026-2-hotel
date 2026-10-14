@@ -13,17 +13,19 @@ public class Main {
            quarto.categoria = "luxo";
            quarto.disponibilidade = true;
 
-           Reserva reserva = new Reserva();
+           Reserva reserva = new Reserva(hospede, quarto);
 
            reserva.hospede = hospede;
            reserva.quarto = quarto;
            reserva.encerrado = true;
            
            
-
-           System.out.println("nome:"+ hospede.getNome());
-           System.out.println("telefone:"+ hospede.getTelefone());
-           System.out.println("quarto:"+ reserva.getQuarto().numero);
+           System.out.println("-------Dados da Reserva-------");
+           System.out.println("Hospede: " + reserva.getHospede().getNome());
+           System.out.println("CPF: " + reserva.getHospede().getCpf());
+           System.out.println("Quarto numero: " + reserva.getHospede().getCpf());
+           System.out.println("Categoria: " + reserva.getQuarto().getCategoria());
+           System.out.println("Status da reserva: " + reserva.getEncerrado());
 
     }
 }
